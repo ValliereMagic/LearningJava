@@ -17,7 +17,6 @@ public class Main {
 			input = new Scanner(System.in);
 			System.out.println("Would you like to check another score? (yes/no): ");
 			String continuation = input.nextLine();
-			System.out.println("Blarg");
 			if (continuation.equals ("yes")) {
 				blarg = true;
 			} else {
