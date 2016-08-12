@@ -26,8 +26,7 @@ public class Main {
 	//Challenge
 	public static double calcFeetAndInches(double feetToInches, double inches) {
 		if (feetToInches >= 0d && inches >=0d && inches <=12d) {
-			feetToInches = feetToInches * 12d;
-			double totalCentimeteres = (feetToInches + inches) * 2.54;
+			double totalCentimeteres = ((feetToInches * 12d) + inches) * 2.54;
 			System.out.println("Total Centimeteres: " + totalCentimeteres);
 			return totalCentimeteres;
 		}
