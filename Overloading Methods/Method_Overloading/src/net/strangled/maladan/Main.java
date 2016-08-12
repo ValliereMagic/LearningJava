@@ -1,25 +1,33 @@
 package net.strangled.maladan;
-
+import java.util.Scanner;
 public class Main {
-
+	public static Scanner input;
 	public static void main(String[] args) {
-	calculateScore("ValliereMagic", 500);
-	calculateScore(5000);
-	calculateScore(12);
+	boolean running = true;
+	while (running) {
+		input = new Scanner(System.in);
+		System.out.println("Enter a value for feet.");
+		double feet = input.nextDouble();
+		System.out.println("Enter a Value for Inches.");
+		double inches = input.nextDouble();
+			if(feet >= 1 && inches >= 1) {
+				calcFeetAndInches(feet, inches);
+			} else if (feet == 0 && inches >= 1){
+				calcFeetAndInches(inches);
+			} else if (inches == 0 && feet >= 1) {
+				calcFeetAndInches(feet, 0);
+			} else {
+				System.out.println("No Values Entered");
+			}
+		input = new Scanner(System.in);
+		System.out.println("Would you like to Enter more Numbers? (Yes / No)");
+		String choice = input.nextLine();
+		if (choice.toLowerCase().equals("no")) {
+			running = false;
+		}
 	
-	calcFeetAndInches(156);
 	}
-	public static int calculateScore(String playerName, int score) {
-		System.out.println("Player " + playerName + " Scored " + score + " Points.");
-		return score * 1000;
-	}
-	public static int calculateScore(int score) {
-	System.out.println("Unknown Plaver" + " Scored " + score + " Points.");
-	return score * 1000;
-	}
-	public static int calculateScore() {
-		return 0;
-	}
+}
 //Number of Parameters must change for method overloading.
 	
 	//Challenge
