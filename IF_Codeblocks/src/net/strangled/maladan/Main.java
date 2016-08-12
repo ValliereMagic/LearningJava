@@ -15,9 +15,9 @@ public class Main {
 			int score = input.nextInt();
 			gameIsOver(username, score);
 			input = new Scanner(System.in);
-			System.out.println("Would you like to check another score? (yes/no): ");
+			System.out.println("Would you like to check another score? (Yes/No): ");
 			String continuation = input.nextLine();
-			if (continuation.equals ("yes")) {
+			if (continuation.toLowerCase().equals("yes")) {
 				blarg = true;
 			} else {
 				blarg = false;
