@@ -7,7 +7,7 @@ public class Main {
 	calculateScore(5000);
 	calculateScore(12);
 	
-	calcFeetAndInches(5, 10);	
+	calcFeetAndInches(6, 10);	
 	calcFeetAndInches(70);
 	}
 	public static int calculateScore(String playerName, int score) {
@@ -30,6 +30,7 @@ public class Main {
 			System.out.println("Total Centimeteres: " + totalCentimeteres);
 			return totalCentimeteres;
 		}
+			System.out.println("Invalid Feet or Inches entry.");
 			return -1d;
 	}	
 	public static double calcFeetAndInches(double inches) {
