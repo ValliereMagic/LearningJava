@@ -6,6 +6,7 @@ public class Main {
 	calculateScore("ValliereMagic", 500);
 	calculateScore(5000);
 	calculateScore(12);
+	
 	calcFeetAndInches(5, 10);	
 	calcFeetAndInches(70);
 	}
