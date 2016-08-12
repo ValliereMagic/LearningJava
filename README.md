@@ -1,2 +1,2 @@
 # Learning Java
-This is my Repository for projects, as I learn more about java.
+This branch is for projects that I am not as proud of. such as resources from my eCourses.
