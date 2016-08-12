@@ -7,8 +7,7 @@ public class Main {
 	calculateScore(5000);
 	calculateScore(12);
 	
-	calcFeetAndInches(6, 10);	
-	calcFeetAndInches(70);
+	calcFeetAndInches(156);
 	}
 	public static int calculateScore(String playerName, int score) {
 		System.out.println("Player " + playerName + " Scored " + score + " Points.");
@@ -31,14 +30,16 @@ public class Main {
 			return totalCentimeteres;
 		}
 			System.out.println("Invalid Feet or Inches entry.");
+			//Negative 1 is a good return, for when an error is encountered.
 			return -1d;
 	}	
 	public static double calcFeetAndInches(double inches) {
 		if (inches >=0) {
 			double feet = inches / 12d;
-			double answer =calcFeetAndInches(feet, 0d);
-			return answer;
+
+			return calcFeetAndInches(feet, 0d);
 		}
+		System.out.println("Invalid Feet or Inches entry.");
 			return -1d;
 	}
 }	
