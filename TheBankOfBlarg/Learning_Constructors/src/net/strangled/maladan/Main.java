@@ -13,7 +13,7 @@ public class Main {
 					newCustomer();
 				}
 					while (running != false) {
-						System.out.println("What would you like to do? Options: (Transaction, Account_Number, Account_Balance, Name, Email, Phone, Exit");
+						System.out.println("What would you like to do? Options: (Transaction, Account_Number, Account_Balance, Name, Email, Phone, Change_Name, Change_Email, Change_Phone Exit");
 						input = new Scanner(System.in);
 						String choiceA = input.nextLine();
 						running = choice(choiceA);
@@ -35,6 +35,12 @@ public class Main {
 			getPhone();
 		}else if (selection.toLowerCase().equals("exit")) {
 			return false;
+		} else if (selection.toLowerCase().equals("change_name")) {
+			changeName();
+		} else if (selection.toLowerCase().equals("change_email")) {
+			changeEmail();
+		} else if (selection.toLowerCase().equals("change_phone")) {
+			changePhone();
 		} else {
 			System.out.println("Invalid Entry.");
 			return true;
@@ -96,6 +102,35 @@ public class Main {
 	public static void getPhone() {
 		int pin = pin();
 		System.out.println("Your phone number is: " + Customer1.getPhoneNumber(pin));
+	}
+	public static void changeName() {
+		int pin = pin();
+		boolean confirmation = false;
+		while (confirmation == false) {
+			System.out.println("What would you like to change your name to?");
+			input = new Scanner(System.in);
+			String name = input.nextLine();
+			System.out.println("Are you sure you want to change your name to " + name + "? You can only change your name twice. (yes / no)");
+			String choice = input.nextLine();
+			if (choice.toLowerCase().equals("yes")) {
+				Customer1.setCustomerName(name, pin);
+				confirmation = true;
+			}	
+		}
+	}
+	public static void changeEmail() {
+		int pin = pin();
+		System.out.println("Please enter your new email.");
+		input = new Scanner(System.in);
+		String email = input.nextLine();
+		Customer1.setCustomerEmail(pin, email);
+	}
+	public static void changePhone() {
+		int pin = pin();
+		System.out.println("Please enter your new phone number.");
+		input = new Scanner(System.in);
+		String phoneNumber = input.nextLine();
+		Customer1.setPhoneNumber(pin, phoneNumber);
 	}
 	
 	public static void auth_Money_Handler(double Amount, int type) {

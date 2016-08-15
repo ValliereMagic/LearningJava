@@ -6,7 +6,7 @@ public class BankOfBlarg {
 	private String customerEmail = "";
 	private String customerPhoneNum = "";
 	private int nameChangeCount = 0;
-	private int maxNameChangeCount = 2;
+	private int maxNameChangeCount = 3;
 	private int pin = 0;
 	
 	
