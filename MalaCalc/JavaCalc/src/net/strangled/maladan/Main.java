@@ -14,7 +14,6 @@ public class Main {
 			running = choice.isRunning();
 			selection = choice.getChoice();
 			choice.calculate(selection);
+		}
 	}
-	}
-
 }
