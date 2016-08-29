@@ -10,7 +10,7 @@ public class Choice extends Main{
 		System.out.println("Enter your choice: ");
 		this.choice = input.nextInt();
 		input.nextLine();
-		if(this.choice == 7) {
+		if(this.choice == 9) {
 			this.running = false;
 		} else {
 			this.running = true;
@@ -60,6 +60,18 @@ public class Choice extends Main{
 				break;
 			case 6:
 				instructions.getInstructions();
+				break;
+			case 7:
+				System.out.println("Enter the base and the exponent.");
+				getTwoNumbers();
+				System.out.println("The answer is: " + calculate.power(this.a, this.b));
+				break;
+			case 8:
+				System.out.println("Enter the number to square root.");
+				this.a = input.nextDouble();
+				input.nextLine();
+				System.out.println("The answer is: " + calculate.sqrt(this.a));
+				break;
 		}
 	}
 	public void getTwoNumbers() {
