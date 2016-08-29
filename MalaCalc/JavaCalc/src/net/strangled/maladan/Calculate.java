@@ -17,7 +17,12 @@ public class Calculate {
 		double c = a / b;
 		return c;
 	}
-	public double quadratic(double a, double b) {
-		return -1;
+	public double power(double a, double b) {
+		double c = Math.pow(a, b);
+		return c;
+	}
+	public double sqrt(double a) {
+		double b = Math.sqrt(a);
+		return b;
 	}
 }
