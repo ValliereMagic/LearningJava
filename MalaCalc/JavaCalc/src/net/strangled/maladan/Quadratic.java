@@ -8,8 +8,8 @@ public class Quadratic {
 		}
 	private void calc(double a, double b, double c) {
 		double d = Math.sqrt((Math.pow(b, 2)) - (4*a*c));
-		this.a1 = (-1*(b) + d) / d;
-		this.a2 = (-1*(b) - d) / d;
+		this.a1 = (-1*(b) + d) / (2*a);
+		this.a2 = (-1*(b) - d) / (2*a);
 	}
 	public double getA1() {
 		return a1;
